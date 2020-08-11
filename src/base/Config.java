@@ -3,9 +3,18 @@ package base;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 public class Config extends WDFunctions {
+	
+	
+	@BeforeSuite
+	public void startTestSuite(){
+		getCurrentTime();
+	}
 
 
 @BeforeMethod
@@ -20,4 +29,20 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\Mahfuj Tuhin\\eclipse-
 	System.out.println (" chrome driver open------------------");
 	driver.get("http://www.booking.com");
    }
+
+@AfterMethod
+public void afterEachTestMethod(){
+	System.out.println("Comparing date and Time");
+   // close browser
+	driver.close();
+	System.out.println (" Test is ended and browser is closeded +++++++ ");
+}
+
+@AfterSuite
+public void tearDown(){
+	System.out.println("I added time calculation, lets see what happened");
+	driver.quit();
+	System.out.println (" Terminated WD +++++++ ");
+}
+
 }
