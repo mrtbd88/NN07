@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Running_Smoke_suite_in_Chrome">
-              <span class="suite-name border-passed">Running Smoke suite in Chrome</span>
+              <span class="suite-name border-failed">Running Smoke suite in Chrome</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Running_Smoke_suite_in_Chrome" class="hide-methods passed suite-Running_Smoke_suite_in_Chrome"> (hide)</a> <!-- hide-methods passed suite-Running_Smoke_suite_in_Chrome -->
-                      <a href="#" panel-name="suite-Running_Smoke_suite_in_Chrome" class="show-methods passed suite-Running_Smoke_suite_in_Chrome"> (show)</a> <!-- show-methods passed suite-Running_Smoke_suite_in_Chrome -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Running_Smoke_suite_in_Chrome" class="hide-methods failed suite-Running_Smoke_suite_in_Chrome"> (hide)</a> <!-- hide-methods failed suite-Running_Smoke_suite_in_Chrome -->
+                      <a href="#" panel-name="suite-Running_Smoke_suite_in_Chrome" class="show-methods failed suite-Running_Smoke_suite_in_Chrome"> (show)</a> <!-- show-methods failed suite-Running_Smoke_suite_in_Chrome -->
                     </span>
-                    <div class="method-list-content passed suite-Running_Smoke_suite_in_Chrome">
+                    <div class="method-list-content failed suite-Running_Smoke_suite_in_Chrome">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Running_Smoke_suite_in_Chrome" title="test_signIn.LoginWithValidCredentialUsingEmail" hash-for-method="loginWithValidCredentialUsingEmailTest">loginWithValidCredentialUsingEmailTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Running_Smoke_suite_in_Chrome -->
+                    </div> <!-- method-list-content failed suite-Running_Smoke_suite_in_Chrome -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,9 +116,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Running_Smoke_suite_in_Chrome" class="panel Running_Smoke_suite_in_Chrome">
-          <div class="suite-Running_Smoke_suite_in_Chrome-class-passed">
+          <div class="suite-Running_Smoke_suite_in_Chrome-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">test_signIn.LoginWithValidCredentialUsingEmail</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -127,10 +127,23 @@
                   <a name="loginWithValidCredentialUsingEmailTest">
                   </a> <!-- loginWithValidCredentialUsingEmailTest -->
                   <span class="method-name">loginWithValidCredentialUsingEmailTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//*[@id=&quot;hf-account-flyout&quot;]/span/span/span[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;MAHFUJ-1B5SPLO&apos;, ip: &apos;10.0.0.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at base.WDFunctions.clickByXpath(WDFunctions.java:36)
+	at test_signIn.LoginWithValidCredentialUsingEmail.loginWithValidCredentialUsingEmailTest(LoginWithValidCredentialUsingEmail.java:35)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Running_Smoke_suite_in_Chrome-class-passed -->
+          </div> <!-- suite-Running_Smoke_suite_in_Chrome-class-failed -->
         </div> <!-- panel Running_Smoke_suite_in_Chrome -->
         <div panel-name="test-xml-Running_Smoke_suite_in_Chrome" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -188,12 +201,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginWithValidCredentialUsingEmailTest')
 data.setCell(0, 2, 'test_signIn.LoginWithValidCredentialUsingEmail')
-data.setCell(0, 3, 3347);
+data.setCell(0, 3, 21886);
 window.suiteTableData['Running_Smoke_suite_in_Chrome']= { tableData: data, tableDiv: 'times-div-Running_Smoke_suite_in_Chrome'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Running_Smoke_suite_in_Chrome">
               </div> <!-- times-div-Running_Smoke_suite_in_Chrome -->
             </div> <!-- times-div -->
@@ -235,20 +248,20 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeEachTestMethod</span>
-                <span class="method-start">47 ms</span>
+                <span class="method-start">38 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loginWithValidCredentialUsingEmailTest</span>
-                <span class="method-start">7773 ms</span>
+                <span class="method-start">8341 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">afterEachTestMethod</span>
-                <span class="method-start">11120 ms</span>
+                <span class="method-start">30228 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-suite after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">11218 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
