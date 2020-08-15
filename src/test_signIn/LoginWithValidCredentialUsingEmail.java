@@ -14,23 +14,29 @@ public class LoginWithValidCredentialUsingEmail extends Config{
 	@Test
 	public void loginWithValidCredentialUsingEmailTest(){
 		System.out.println ("login With Valid Credential Using Email Test start");
-		// click on sign in link from header
-		clickByXpath (signin.signInLinkLoc);
-		// Enter email
-		typeByCss (signin.emailLoc, signin.emailValue);
-		// click Next button
-		clickByXpath (signin.nextButtonLoc);
+		
+		// click on account link from header
+		clickByXpath (signin.accountlinkloc);
+		
+		// click on Sign In link
+		clickByXpath (signin.signinlinkloc);
+		
+		// enter email
+		typeByXpath (signin.emailloc, signin.emailval);
+		
 		// enter password
-		typeByXpath (signin.passwordLoc, signin.passValue);
+		typeByXpath (signin.passloc, signin.passval);
+		
 		// click Sign In button
-		clickByXpath (signin.signInButtonLoc);
-		// Assert --- most important 
-		String act = driver.findElement(By.xpath(signin.myActualFullNameLoc)).getText(); 
+		clickByXpath (signin.signbuttonloc);
+		
+		// Assert
+		// click on account link from header
+		clickByXpath (signin.accountlinkloc);
+		String act = driver.findElement(By.xpath(signin.myactualnameloc)).getText(); 
 		// act is coming from Domain -- the one developer build and release
-		String exp = "Mahfujur Rahman"; // exp is coming from Requirement or Mock-up
+		String exp = "Mahfujur R."; // exp is coming from Requirement or Mock-up
 		Assert.assertEquals(act, exp);
 
 	}
-}	
-}
 }

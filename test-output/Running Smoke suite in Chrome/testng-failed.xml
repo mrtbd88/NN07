@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Running Smoke suite in Chrome]" parallel="none">
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="test_signIn.LoginWithValidCredentialUsingEmail">
+        <methods>
+          <include name="loginWithValidCredentialUsingEmailTest"/>
+          <include name="beforeEachTestMethod"/>
+          <include name="afterEachTestMethod"/>
+          <include name="startTestSuite"/>
+        </methods>
+      </class> <!-- test_signIn.LoginWithValidCredentialUsingEmail -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Running Smoke suite in Chrome] -->
