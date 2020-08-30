@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Running Smoke suite in Chrome]" parallel="none">
-  <test name="Test(failed)" parallel="none">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="test_signIn.ContactwithWalmart">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeEachTestMethod"/>
+          <include name="afterEachTestMethod"/>
+          <include name="startTestSuite"/>
+          <include name="gettextofcontact"/>
+        </methods>
+      </class> <!-- test_signIn.ContactwithWalmart -->
+      <class name="test_signIn.LoginWithInValidCredentialUsingEmail">
+        <methods>
+          <include name="loginWithValidCredentialUsingEmailTest"/>
+          <include name="tearDown"/>
+          <include name="beforeEachTestMethod"/>
+          <include name="afterEachTestMethod"/>
+          <include name="startTestSuite"/>
+        </methods>
+      </class> <!-- test_signIn.LoginWithInValidCredentialUsingEmail -->
       <class name="test_signIn.LoginWithValidCredentialUsingEmail">
         <methods>
+          <include name="tearDown"/>
           <include name="loginWithValidCredentialUsingEmailTest"/>
           <include name="beforeEachTestMethod"/>
           <include name="afterEachTestMethod"/>
@@ -12,5 +31,5 @@
         </methods>
       </class> <!-- test_signIn.LoginWithValidCredentialUsingEmail -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Running Smoke suite in Chrome] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

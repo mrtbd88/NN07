@@ -8,15 +8,17 @@ public class SignInSignup {
 	public String passloc          ="//*[@id=\"password\"]";
 	public String signbuttonloc    ="//*[@id=\"sign-in-form\"]/button[1]";
 	public String myactualnameloc	= "//*[@id=\"vh-account-menu-root\"]/div[1]/div/span";
+	public String helplinkloc       ="//*[@id=\"vh-account-menu-root\"]/div[2]/div/a[3]/div";
+	public String contactusbuttonloc="//*[@id=\"contact-us\"]/span/span";
 	
 	
-	public String emailval         ="mrtbd88@gmail.com";
+	public String emailval         ="mahfuj.bp@gmail.com";
 	public String invemailval      ="mrtbd888@gmail.com";
-	public String passval          ="Maailoveu88";
+	public String passval          ="Mypassword007";
 	
 	
 	
-	
+
 	
 	
 	
